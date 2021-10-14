@@ -1,7 +1,7 @@
 import { makeStyles, withStyles, styled } from "@mui/styles";
 import clsx from "clsx";
 import React from "react";
-import { newTheme } from "../Constant";
+import { Theme } from "../Theme";
 
 const COLORS = ["primary", "secondary", "default"];
 function generateColor(theme) {
@@ -9,7 +9,7 @@ function generateColor(theme) {
 
   COLORS.forEach((standard) => {
     styles[`color-${standard}`] = {
-      color: newTheme[`${standard}`].color,
+      color: Theme[`${standard}`].color,
     };
   });
 
@@ -21,7 +21,7 @@ function generateBackground(theme) {
 
   COLORS.forEach((standard) => {
     styles[`bg-color-${standard}`] = {
-      backgroundColor: newTheme[`${standard}`].color,
+      backgroundColor: Theme[`${standard}`].color,
     };
   });
 
