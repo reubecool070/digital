@@ -1,64 +1,13 @@
 import type { NextPage } from "next";
+import MainHeader from "../src/Layout/MainHeader";
 import TopHeader from "../src/Layout/TopHeader";
-import Button from "../src/Components/Button";
-import Grid from "../src/Components/Grid";
+import Paper from "../src/Components/Paper";
 
 const Home: NextPage = () => {
   return (
     <div>
-      {/* <TopHeader /> */}
-      <Grid container spacing={3}>
-        <Grid item>
-          <Button
-            variant="contained"
-            color="primary"
-            onClick={() => console.log("clicked")}
-            // startIcon={<div>hlw </div>}
-          >
-            Primary
-          </Button>
-        </Grid>
-        <Grid item>
-          <Button
-            variant="contained"
-            color="secondary"
-            onClick={() => console.log("clicked")}
-            // startIcon={<div>hlw </div>}
-          >
-            Secondary
-          </Button>
-        </Grid>
-        <Grid item>
-          <Button
-            variant="outlined"
-            color="primary"
-            onClick={() => console.log("clicked")}
-            // startIcon={<div>hlw </div>}
-          >
-            Outlined
-          </Button>
-        </Grid>
-        <Grid item>
-          <Button
-            variant="outlined"
-            color="secondary"
-            onClick={() => console.log("clicked")}
-            // startIcon={<div>hlw </div>}
-          >
-            Outlined
-          </Button>
-        </Grid>
-        <Grid item>
-          <Button variant="outlined" onClick={() => console.log("clicked")}>
-            Secondary
-          </Button>
-        </Grid>
-        <Grid item>
-          <Button variant="contained" onClick={() => console.log("clicked")}>
-            Secondary
-          </Button>
-        </Grid>
-      </Grid>
+      <TopHeader />
+      <MainHeader />
     </div>
   );
 };

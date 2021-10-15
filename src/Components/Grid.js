@@ -1,7 +1,7 @@
 import React from "react";
 import { withStyles } from "@mui/styles";
 import clsx from "clsx";
-import { Theme } from "../Theme";
+// import { Theme } from "../Theme";
 import { createTheme } from "@mui/material";
 
 const SPACINGS = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -53,7 +53,7 @@ function generateGrid(globalStyles, theme, breakpoint) {
   } else {
     //  globalStyles[keys[upKey(breakpoint)]] = styles;
     //    globalStyles[keys["md"]] = styles;
-    globalStyles[Theme.breakpoints.up(breakpoint)] = styles;
+    globalStyles[theme.breakpoints.up(breakpoint)] = styles;
   }
   // console.log("breakpoint", upKey(breakpoint));
 }
@@ -182,7 +182,7 @@ export const styles = (theme) => ({
     justifyContent: "space-evenly",
   },
   ...generateGutter("xs"),
-  ...Theme.breakpoints.keys.reduce((accumulator, key) => {
+  ...theme.breakpoints.keys.reduce((accumulator, key) => {
     generateGrid(accumulator, theme, key);
     return accumulator;
   }, {}),

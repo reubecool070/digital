@@ -20,15 +20,16 @@ export const styles = (theme) => ({
   /* Styles applied to the root element. */
   root: {
     ...theme.typography.button,
-    fontSize: "20px",
+    fontSize: "1rem",
     boxSizing: "border-box",
     minWidth: 64,
-    padding: "6px 16px",
+    padding: "6px 32px",
     borderRadius: theme.shape.borderRadius,
     textTransform: "capitalize",
     color: theme.palette.text.primary,
     backgroundColor: "transparent",
     border: "none",
+    cursor: "pointer",
     // transition: theme.transitions.create(
     //   ["background-color", "box-shadow", "border"],
     //   {
@@ -62,7 +63,7 @@ export const styles = (theme) => ({
   },
   /* Styles applied to the root element if `variant="text"`. */
   text: {
-    padding: "6px 8px",
+    // padding: "6px 8px",
   },
   /* Styles applied to the root element if `variant="text"` and `color="primary"`. */
   textPrimary: {
@@ -94,13 +95,14 @@ export const styles = (theme) => ({
   },
   /* Styles applied to the root element if `variant="outlined"`. */
   outlined: {
-    padding: "5px 15px",
+    // padding: "5px 15px",
     // border: `1px solid ${
     //   theme.palette.type === "light"
     //     ? "rgba(0, 0, 0, 0.23)"
     //     : "rgba(255, 255, 255, 0.23)"
     // }`,
     border: `1px solid rgba(0, 0, 0, 0.53)`,
+    boxShadow: theme.shadows[0],
     "&$disabled": {
       border: `1px solid ${theme.palette.action.disabled}`,
     },
@@ -145,7 +147,7 @@ export const styles = (theme) => ({
   },
   /* Styles applied to the root element if `variant="contained"`. */
   contained: {
-    color: "#e0e0e0",
+    color: "#fff",
     backgroundColor: "rgba(0, 0, 0, 0.87)",
     boxShadow: theme.shadows[2],
     "&:hover": {
@@ -355,9 +357,9 @@ const Button = function (props) {
   return (
     <button
       disabled={disabled}
-      focusRipple={!disableFocusRipple}
+      // focusRipple={!disableFocusRipple}
       className={className}
-      focusVisibleClassName={clsx(classes.focusVisible, focusVisibleClassName)}
+      // focusVisibleClassName={clsx(classes.focusVisible, focusVisibleClassName)}
       {...other}
     >
       <span className={classes.label}>
