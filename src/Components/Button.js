@@ -101,10 +101,27 @@ export const styles = (theme) => ({
     //     ? "rgba(0, 0, 0, 0.23)"
     //     : "rgba(255, 255, 255, 0.23)"
     // }`,
+    // backgroundColor:"#fff",
     border: `1px solid rgba(0, 0, 0, 0.53)`,
     boxShadow: theme.shadows[0],
     "&$disabled": {
       border: `1px solid ${theme.palette.action.disabled}`,
+    },
+  },
+  outlinedWhite: {
+    // color: theme.palette.white.main,
+    border: `1px solid ${fade(
+      theme.palette.dark.main,
+      theme.palette.action.mainOpacity
+    )}`,
+    backgroundColor: "#fff",
+    "&:hover": {
+      border: `1px solid #000`,
+      backgroundColor: fade("#fff", 0.8),
+      // Reset on touch devices, it doesn't add specificity
+      "@media (hover: none)": {
+        backgroundColor: "transparent",
+      },
     },
   },
   /* Styles applied to the root element if `variant="outlined"` and `color="primary"`. */

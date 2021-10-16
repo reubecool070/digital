@@ -233,7 +233,7 @@ const Grid = function (props) {
     },
     classNameProp
   );
-  return <Component className={className}>{children}</Component>;
+  return <Component className={className} {...other}>{children}</Component>;
 };
 
 const StyledGrid = withStyles(styles, { name: "MuiGrid" })(Grid);

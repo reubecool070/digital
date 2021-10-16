@@ -43,6 +43,7 @@ export const styles = (theme) => {
       display: "inline-flex",
       alignItems: "center",
       border: "1px solid #000",
+      borderRadius:"4px",
       "&$disabled": {
         color: theme.palette.text.disabled,
         cursor: "default",
@@ -107,6 +108,9 @@ export const styles = (theme) => {
         // Remove the padding when type=search.
         "-webkit-appearance": "none",
       },
+      // "&::placeholder":{
+      //   backgroundColor:"#fff",
+      // },
       // Show and hide the placeholder logic
       "label[data-shrink=false] + $formControl &": {
         "&::-webkit-input-placeholder": placeholderHidden,

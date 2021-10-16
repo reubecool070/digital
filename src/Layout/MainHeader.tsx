@@ -9,8 +9,9 @@ import InputBase from "../Components/InputBase";
 import { styled } from "@mui/styles";
 import Paper from "../Components/Paper";
 
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
+const StyledInputBase = styled(InputBase)(() => ({
   color: "inherit",
+  backgroundColor: "#fff",
   "& .MuiInputBase-input": {
     padding: "8px 8px 8px calc(1em + 32px)",
     // vertical padding + font size from searchIcon
@@ -39,13 +40,11 @@ const MainHeader = () => {
           <Grid container item xs={2} justify="center">
             <Image src={logo} alt="" placeholder="blur" />
           </Grid>
-          <Grid item xs={8} container justify="center" alignContent="center">
+          <Grid item xs={7} container justify="center" alignContent="center">
             <Paper
               elevation={2}
               style={{
                 position: "relative",
-                borderRadius: "4px",
-                backgroundColor: "rgba(255, 255, 255, 0.15)",
                 margin: "0 5%",
                 width: "100%",
               }}
@@ -75,12 +74,14 @@ const MainHeader = () => {
           </Grid>
           <Grid
             item
-            xs={2}
+            xs={3}
             container
             alignContent="center"
             justify="space-evenly"
           >
-            <Button variant="outlined">Sign Up</Button>
+            <Button color="white" variant="outlined">
+              Sign Up
+            </Button>
             <Button variant="contained">Log In</Button>
           </Grid>
         </Grid>

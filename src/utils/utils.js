@@ -94,3 +94,10 @@ export function debounce(func, wait = 166) {
 
   return debounced;
 }
+
+export function isMuiElement(element, muiNames) {
+  return (
+    React.isValidElement(element) &&
+    muiNames.indexOf(element.type.muiName) !== -1
+  );
+}

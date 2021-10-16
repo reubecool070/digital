@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import clsx from "clsx";
 import { withStyles } from "@mui/styles";
 
@@ -42,13 +41,7 @@ const Paper = function (props) {
     ...other
   } = props;
 
-  if (process.env.NODE_ENV !== "production") {
-    if (classes[`elevation${elevation}`] === undefined) {
-      console.error(
-        `Material-UI: this elevation \`${elevation}\` is not implemented.`
-      );
-    }
-  }
+
 
 
   return (

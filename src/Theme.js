@@ -40,6 +40,12 @@ export const Theme = {
       primary: "rgba(0, 0, 0, 0.87)",
       secondary: "rgba(0, 0, 0, 0.6)",
     },
+    error: {
+      contrastText: "#fff",
+      dark: "#c62828",
+      light: "#ef5350",
+      main: "#d32f2f",
+    },
     primary: {
       contrastText: "#fff",
       dark: "#1565c0",
@@ -52,12 +58,18 @@ export const Theme = {
       light: "#ba68c8",
       main: "#9c27b0",
     },
+    dark:{
+      main:"#000",
+    },
     type: "light",
   },
-  primary: {
+  grey: {
     color: "#CAC4C4",
   },
-  secondary: {
+  lightGrey: {
+    color: "#E5E5E5",
+  },
+  white: {
     color: "#fff",
   },
   default: {
@@ -73,8 +85,99 @@ export const Theme = {
       textTransform: "capitalize",
     },
     fontFamily: `Roboto", "Helvetica", "Arial", sans-serif`,
+    fontSize: 14,
+    fontWeightBold: 700,
+    fontWeightLight: 300,
+    fontWeightMedium: 500,
+    fontWeightRegular: 400,
     pxToRem: (size) => {
       return `${size / 16}rem`;
+    },
+    body1: {
+      fontFamily: `\"Roboto\", \"Helvetica\", \"Arial\", sans-serif`,
+      fontSize: "1rem",
+      fontWeight: 400,
+      letterSpacing: "0.00938em",
+      lineHeight: 1.5,
+    },
+    body2: {
+      fontFamily: `\"Roboto\", \"Helvetica\", \"Arial\", sans-serif`,
+      fontSize: "0.875rem",
+      fontWeight: 400,
+      letterSpacing: "0.01071em",
+      lineHeight: 1.43,
+    },
+    caption: {
+      fontFamily: `\"Roboto\", \"Helvetica\", \"Arial\", sans-serif`,
+      fontSize: "0.75rem",
+      fontWeight: 400,
+      letterSpacing: "0.03333em",
+      lineHeight: 1.66,
+    },
+    h1: {
+      fontFamily: `\"Roboto\", \"Helvetica\", \"Arial\", sans-serif`,
+      fontSize: "6rem",
+      fontWeight: 300,
+      letterSpacing: "-0.01562em",
+      lineHeight: 1.167,
+    },
+    h2: {
+      fontFamily: `\"Roboto\", \"Helvetica\", \"Arial\", sans-serif`,
+      fontSize: "3.75rem",
+      fontWeight: 300,
+      letterSpacing: "-0.00833em",
+      lineHeight: 1.2,
+    },
+    h3: {
+      fontFamily: `\"Roboto\", \"Helvetica\", \"Arial\", sans-serif`,
+      fontSize: "3rem",
+      fontWeight: 400,
+      letterSpacing: "0em",
+      lineHeight: 1.167,
+    },
+    h4: {
+      fontFamily: `\"Roboto\", \"Helvetica\", \"Arial\", sans-serif`,
+      fontSize: "2.125rem",
+      fontWeight: 400,
+      letterSpacing: "0.00735em",
+      lineHeight: 1.235,
+    },
+    h5: {
+      fontFamily: `\"Roboto\", \"Helvetica\", \"Arial\", sans-serif`,
+      fontSize: "1.5rem",
+      fontWeight: 400,
+      letterSpacing: "0em",
+      lineHeight: 1.334,
+    },
+    h6: {
+      fontFamily: `\"Roboto\", \"Helvetica\", \"Arial\", sans-serif`,
+      fontSize: "1.25rem",
+      fontWeight: 500,
+      letterSpacing: "0.0075em",
+      lineHeight: 1.6,
+    },
+    htmlFontSize: 16,
+    overline: {
+      fontFamily: `\"Roboto\", \"Helvetica\", \"Arial\", sans-serif`,
+      fontSize: "0.75rem",
+      fontWeight: 400,
+      letterSpacing: "0.08333em",
+      lineHeight: 2.66,
+      textTransform: "uppercase",
+    },
+    subtitle1: {
+      fontFamily: `\"Roboto\", \"Helvetica\", \"Arial\", sans-serif`,
+      fontSize: "1rem",
+      fontWeight: 400,
+      letterSpacing: "0.00938em",
+      lineHeight: 1.75,
+    },
+    subtitle2: {
+      fontFamily: `\"Roboto\", \"Helvetica\", \"Arial\", sans-serif`,
+      fontSize: "0.875rem",
+      fontWeight: 500,
+      letterSpacing: "0.00714em",
+      lineHeight: 1.57,
     },
   },
   shape: {

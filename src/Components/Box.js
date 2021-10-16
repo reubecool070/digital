@@ -1,15 +1,15 @@
 import { makeStyles, withStyles, styled } from "@mui/styles";
 import clsx from "clsx";
 import React from "react";
-import { Theme } from "../Theme";
+// import { Theme } from "../Theme";
 
-const COLORS = ["primary", "secondary", "default"];
+const COLORS = ["grey", "white", "default", "lightGrey"];
 function generateColor(theme) {
   const styles = {};
 
   COLORS.forEach((standard) => {
     styles[`color-${standard}`] = {
-      color: Theme[`${standard}`].color,
+      color: theme[`${standard}`].color,
     };
   });
 
@@ -21,7 +21,7 @@ function generateBackground(theme) {
 
   COLORS.forEach((standard) => {
     styles[`bg-color-${standard}`] = {
-      backgroundColor: Theme[`${standard}`].color,
+      backgroundColor: theme[`${standard}`].color,
     };
   });
 
@@ -42,6 +42,7 @@ export const Box = (props) => {
     [classes[`bg-color-${String(bgColor)}`]]: bgColor,
     classNameProp,
   });
+
 
   return <div className={className}>{children}</div>;
 };
