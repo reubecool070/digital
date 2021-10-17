@@ -8,7 +8,7 @@ import { Theme } from "../src/Theme";
 const theme = createTheme();
 
 function MyApp({ Component, pageProps }: AppProps) {
-  console.log("theme", theme);
+  // console.log("theme", theme);
   return (
     <ThemeProvider theme={Theme}>
       <Component {...pageProps} />

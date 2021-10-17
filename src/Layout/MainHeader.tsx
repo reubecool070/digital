@@ -37,10 +37,18 @@ const MainHeader = () => {
     <>
       <Layout>
         <Grid container>
-          <Grid container item xs={2} justify="center">
+          <Grid container item lg={2} md={3} xs={12} justify="center">
             <Image src={logo} alt="" placeholder="blur" />
           </Grid>
-          <Grid item xs={7} container justify="center" alignContent="center">
+          <Grid
+            item
+            xs={6}
+            lg={7}
+            md={5}
+            container
+            justify="center"
+            alignContent="center"
+          >
             <Paper
               elevation={2}
               style={{
@@ -74,10 +82,12 @@ const MainHeader = () => {
           </Grid>
           <Grid
             item
-            xs={3}
+            xs={6}
+            lg={3}
+            md={4}
             container
             alignContent="center"
-            justify="space-evenly"
+            justify="space-between"
           >
             <Button color="white" variant="outlined">
               Sign Up
